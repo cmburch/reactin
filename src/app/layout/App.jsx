@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EventDashboard from '../../features/event/EventDashboard/EventDashboard';
 import { Button } from 'semantic-ui-react';
 
 // import logo from './logo.svg';
@@ -9,11 +10,7 @@ class App extends Component {
     return (
       <div>
         <h1>Reactin</h1>
-        <button className="ui icon button">
-          <i className="smile icon"></i>
-          CSS Button 
-        </button>
-        <Button icon ="smile" content="React Button"></Button>
+     
       </div>
     );
   }
