@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'semantic-ui-css/semantic.min.css'
+// import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 import App from './app/layout/App';
 import * as serviceWorker from './serviceWorker';
@@ -41,5 +41,3 @@ serviceWorker.unregister();
 
 
 
-under the source folder create a folder called app and create another folder called features
-import 'semantic-ui-css/semantic.min.css'
