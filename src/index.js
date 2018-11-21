@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './app/layout/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
@@ -10,3 +10,33 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+// import App from './app/layout/App';
+// // import registerServiceWorker from './registerServiceWorker';
+
+// const rootEl = document.getElementById('root');
+
+// let render = () => {
+//   ReactDOM.render(<App />, rootEl)
+// }
+
+// if (module.hot) {
+//   module.hot.accept('./app/layout/App', () => {
+//     setTimeout(render)
+//   })
+// }
+
+// render()
+
+// registerServiceWorker();
+
+
+
+
+
