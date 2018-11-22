@@ -34,6 +34,7 @@ import { Segment, Item, Icon, List, Button } from 'semantic-ui-react'
                 </List>
             </Segment>
             <Segment clearing>
+            <span>Description will go here</span>
                 <Button as="a" color="teal" floated="right" content="View" />
             </Segment>
         </Segment.Group>
