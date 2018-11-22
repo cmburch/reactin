@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import EventListAttendee from './EventListAttendee'
 
 import { Segment, Item, Icon, List, Button } from 'semantic-ui-react'
 
@@ -9,7 +10,7 @@ import { Segment, Item, Icon, List, Button } from 'semantic-ui-react'
             <Segment>
                 <Item.Group>
                     <Item>
-                        <Item.Image size="tiny" circular src="" />
+                        <Item.Image as='a' size='mini' circular src='https://randomuser.me/api/portraits/men/20.jpg' />
                         <Item.Content>
                             <Item.Header as="a">Event Title</Item.Header>
                             <Item.Description>
@@ -27,7 +28,7 @@ import { Segment, Item, Icon, List, Button } from 'semantic-ui-react'
             </Segment>
             <Segment secondary>
                 <List horizontal>
-                    {/* todo: attendees go here */}
+                    <EventListAttendee/>
                 </List>
             </Segment>
             <Segment clearing>
