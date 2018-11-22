@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import EventDashboard from '../../features/event/EventDashboard/EventDashboard';
-// import { Button } from 'semantic-ui-react';
-// import logo from './logo.svg';
-// import './app/layout/App.css';
 
 class App extends Component {
   render() {
     return (
       <div>
         <h1>Reactin</h1>
-    <EventDashboard/>
+        <EventDashboard/>
       </div>
     );
   }
