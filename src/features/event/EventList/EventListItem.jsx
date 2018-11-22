@@ -29,13 +29,13 @@ import { Segment, Item, Icon, List, Button } from 'semantic-ui-react'
             </Segment>
             <Segment secondary>
                 <List horizontal>
-                    <EventListAttendee/>
-                    <EventListAttendee/>
-                    <EventListAttendee/>
+                    {event.attendees.map(attendee => (
+                        <EventListAttendee key={attendee.id} attendee={attendee}/>
+                    ))}
                 </List>
             </Segment>
             <Segment clearing>
-            <span>{event.description}</span>
+                <span>{event.description}</span>
                 <Button as="a" color="teal" floated="right" content="View" />
             </Segment>
         </Segment.Group>
