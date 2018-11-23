@@ -85,6 +85,7 @@ class EventDashboard extends Component {
 handleCreateEvent = (newEvent) => {
   newEvent.id = cuid();
   newEvent.hostPhotoURL ='/assets/user.png';
+  //...this.state.events are the old events the newEvent is the updated from
   const updatedEvents = [...this.state.events,newEvent]
   this.setState({
     events: updatedEvents,

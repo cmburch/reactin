@@ -11,10 +11,11 @@ import { Segment, Form, Button } from 'semantic-ui-react'
       venue: '',
       hostedBy: ''
     }
-  }
+  } 
 
   onFormSubmit = (evt)=>{
     evt.preventDefault();
+    //call method from parent,pass the value to the parent component 
     this.props.createEvent(this.state.event)
     console.log(this.state.event);
    }
@@ -23,6 +24,7 @@ import { Segment, Form, Button } from 'semantic-ui-react'
     const newEvent = this.state.event;
     newEvent[evt.target.name] = evt.target.value;
     //event.title is equivalant to the code above
+    //this changes the state that will get pass to the parent
     this.setState({
       event:newEvent
       // event : {
