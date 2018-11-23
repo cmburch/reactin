@@ -29,7 +29,7 @@ import { Segment, Item, Icon, List, Button } from 'semantic-ui-react'
             </Segment>
             <Segment secondary>
                 <List horizontal>
-                    {event.attendees.map(attendee => (
+                    {event.attendees && event.attendees.map(attendee => (
                         <EventListAttendee key={attendee.id} attendee={attendee}/>
                     ))}
                 </List>
