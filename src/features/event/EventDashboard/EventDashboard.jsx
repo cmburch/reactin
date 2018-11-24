@@ -59,17 +59,17 @@ const eventsDashboard = [
 
 
 class EventDashboard extends Component {
- constructor(props) {
-   super(props)
+//  constructor(props) {
+//    super(props)
 
-   this.state = {
-     events:eventsDashboard,
-     isOpen:false
-   }
+  //  this.state = {
+  //    events:eventsDashboard,
+  //    isOpen:false
+  //  }
   //  this.handleFormOpen = this.handleFormOpen.bind(this);
   //  this.handleCancel = this.handleCancel.bind(this);
 
- }
+//  }
 
 //  handleFormOpen(){
 //    this.setState({
@@ -82,6 +82,12 @@ class EventDashboard extends Component {
 //     isOpen: false
 //   })
 // }
+  state = {
+    events: eventsDashboard,
+    isOpen: false,
+    selectedEvent: null
+  }
+
 handleCreateEvent = (newEvent) => {
   newEvent.id = cuid();
   newEvent.hostPhotoURL ='/assets/user.png';
@@ -93,8 +99,16 @@ handleCreateEvent = (newEvent) => {
   })
 }
 
+handleEditEvent = (eventToUpdate)=> () =>{
+  this.setState({
+    selectedEvent: eventToUpdate,
+    isOpen: true
+  })
+}
+
 handleFormOpen = ()=>{
   this.setState({
+    selectedEvent: null,
     isOpen: true
   })
 }
@@ -105,16 +119,17 @@ handleCancel = ()=>{
  })
 }
   render() {
+    const {selectedEvent} = this.state;
     return (
       <div>
           <Grid>
                 <Grid.Column width={10}>
-                <EventList events={this.state.events}/>
+                <EventList onEventEdit ={this.handleEditEvent} events={this.state.events}/>
                 </Grid.Column>
                 <Grid.Column width={6}>
                 <Button onClick={this.handleFormOpen} positive content="Create Event" />
                 {this.state.isOpen && 
-                <EventForm createEvent={this.handleCreateEvent} handleCancel={this.handleCancel}/> }                    
+                <EventForm selectedEvent={selectedEvent} createEvent={this.handleCreateEvent} handleCancel={this.handleCancel}/> }                    
                 </Grid.Column>
           </Grid>
       </div>
